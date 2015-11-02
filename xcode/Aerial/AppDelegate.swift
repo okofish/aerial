@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
     
     var appController: TVApplicationController?
     
-    static let TVBaseURL = "https://jesse.ws/tvos/aerial/"
+    static let TVBaseURL = "http://okofish.github.io/aerial/client/"
     
     static let TVBootURL = "\(AppDelegate.TVBaseURL)js/application.js"
 
