@@ -91,7 +91,7 @@ function getVideoList(cb) {
       return camelize(obj['accessibilityLabel'] + ' ' + obj['timeOfDay'])
     });
 
-    var videoObjects = _.mapObject(locationVids, function(vidObjs) {
+    var videosObject = _.mapObject(locationVids, function(vidObjs) {
       return _.map(vidObjs, function(video) {
         return {
           'title': video['accessibilityLabel'] + ', ' + capitalize(video['timeOfDay']),
@@ -102,7 +102,7 @@ function getVideoList(cb) {
     });
 
     // execute callback
-    cb(videoObjects);
+    cb(videosObject);
 
   }, false);
   xhr.open("GET", 'http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/entries.json', true);
